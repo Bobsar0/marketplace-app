@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/design/tokosmile_colors.dart';
+import '../../../../shared/styles/tokosmile_colors.dart';
 
 class AppBarIcon extends StatelessWidget {
   final String text;

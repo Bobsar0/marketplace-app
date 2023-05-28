@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:marketplace/views/home/widgets/app_bar_icon.dart';
+
+import 'app_bar_icon.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color color;
-
-  const HomeAppBar({Key? key, required this.color}) : super(key: key);
+  const HomeAppBar({super.key, this.color = Colors.white});
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +23,13 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                   contentPadding: const EdgeInsets.symmetric(vertical: 15),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8)),
-                  prefixIcon: const Icon(Icons.search),
+                  prefixIcon: const Icon(CupertinoIcons.search),
+                  // prefixIcon: SvgPicture.asset(Assets.searchIconSvg),
                   hintText: 'Search ..'),
             ),
           ),
-          SizedBox(width: 10),
-          const AppBarIcon(text: '1', icon: Icons.lock_outline),
+          const SizedBox(width: 10),
+          const AppBarIcon(text: '1', icon: Icons.shopping_bag_outlined),
           const AppBarIcon(text: '9+', icon: Icons.chat_outlined),
           // SizedBox(width: 1)
         ],

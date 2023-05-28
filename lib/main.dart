@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marketplace/views/home/pages/home_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:marketplace/features/landing/views/landing_screen.dart';
 
 void main() {
   runApp(const TokosmileApp());
@@ -12,8 +13,10 @@ class TokosmileApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.grey),
-      home: const HomeScreen(),
+      theme: ThemeData(
+          primarySwatch: Colors.grey,
+          fontFamily: GoogleFonts.lato().fontFamily),
+      home: const LandingScreen(),
     );
   }
 }
