@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
-import '../../../../shared/styles/style_constants.dart';
-import '../../models/header_data.dart';
-import 'header_button.dart';
-import 'header_tab_dot.dart';
-import 'home_app_bar.dart';
+import '../../../../../shared/styles/style_constants.dart';
+import '../../../../../shared/styles/tokosmile_colors.dart';
+import '../../../../../shared/utils/locator.dart';
+import '../../../controllers/home_controller.dart';
+import '../../../models/banner.dart';
+import '../home_app_bar.dart';
+import 'banner_button.dart';
+import 'banner_tab_dot.dart';
 
-class HeaderContent extends StatelessWidget {
-  final HeaderData data;
+class BannerContent extends StatelessWidget {
+  final BannerData data;
 
-  const HeaderContent(this.data, {super.key});
+  BannerContent(this.data, {super.key});
+
+  final HomeController _controller = Locator.getController();
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +23,6 @@ class HeaderContent extends StatelessWidget {
       appBar: HomeAppBar(color: Color(data.colorHex)),
       body: Column(
         children: [
-          // SizedBox(height: 100),
           Stack(
             alignment: Alignment.center,
             children: [
@@ -62,9 +67,11 @@ class HeaderContent extends StatelessWidget {
                         visible: data.footer != null,
                         child: Text(
                           data.footer ?? '',
-                          style: DefaultTextStyle.of(context)
-                              .style
-                              .copyWith(fontSize: 12),
+                          style: TextStyle(
+                            fontSize: 12,
+                            color:
+                                TokosmileColors.metallicBlack.withOpacity(0.6),
+                          ),
                         )),
                     const SizedBox(height: StyleConstants.defaultSize * 1.5),
                     const HeaderButton(),
@@ -72,9 +79,15 @@ class HeaderContent extends StatelessWidget {
                 ),
               ),
               Positioned(
-                  top: StyleConstants.defaultSize / 2,
-                  right: StyleConstants.defaultSize,
-                  child: HeaderTabDots()),
+                top: StyleConstants.defaultSize / 2,
+                right: StyleConstants.defaultSize,
+                child: Obx(() {
+                  return BannerTabDots(
+                    activeIndex: _controller.currHeaderIndex.value,
+                    length: _controller.banners.length,
+                  );
+                }),
+              ),
             ],
           ),
         ],

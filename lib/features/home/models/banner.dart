@@ -1,4 +1,4 @@
-class HeaderData {
+class BannerData {
   final int id;
   final int colorHex;
   final String title;
@@ -6,7 +6,7 @@ class HeaderData {
   final String? footer;
   final String imagePath;
 
-  HeaderData(
+  BannerData(
       {required this.id,
       required this.colorHex,
       required this.title,

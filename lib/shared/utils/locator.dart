@@ -1,6 +1,9 @@
 import 'dart:collection';
 import 'dart:developer';
 
+import 'package:marketplace/features/home/services/banner_service.dart';
+import 'package:marketplace/features/home/services/product_service.dart';
+
 import '../../features/home/controllers/home_controller.dart';
 import '../../features/landing/controllers/landing_controller.dart';
 
@@ -30,6 +33,8 @@ abstract class Locator {
     _serviceMap = HashMap();
 
     log('Registering service locator');
+    _registerService<BannerService>(BannerService());
+    _registerService<ProductService>(ProductService());
   }
 
   /// Initialises all controllers for future access

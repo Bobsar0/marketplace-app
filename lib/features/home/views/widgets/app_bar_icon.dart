@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace/shared/styles/style_constants.dart';
 
 import '../../../../shared/styles/tokosmile_colors.dart';
 
@@ -15,13 +16,16 @@ class AppBarIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        IconButton(onPressed: onPressed, icon: Icon(icon)),
+        IconButton(
+            onPressed: onPressed,
+            icon: Icon(icon, color: TokosmileColors.metallicBlack)),
         Positioned(
-          left: 20,
+          left: StyleConstants.defaultSize * 1.9,
+          top: StyleConstants.defaultSize / 2,
           child: Card(
             child: Container(
-              width: 20,
-              height: 20,
+              width: StyleConstants.defaultSize * 1.8,
+              height: StyleConstants.defaultSize * 1.5,
               decoration: BoxDecoration(
                 color: TokosmileColors.darkPink,
                 borderRadius: BorderRadius.circular(4),
@@ -29,7 +33,7 @@ class AppBarIcon extends StatelessWidget {
               child: Align(
                 alignment: Alignment.center,
                 child: Text(text,
-                    style: const TextStyle(fontSize: 12, color: Colors.white)),
+                    style: const TextStyle(fontSize: 10, color: Colors.white)),
               ),
             ),
           ),

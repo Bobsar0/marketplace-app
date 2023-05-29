@@ -29,6 +29,7 @@ class BottomNavBar extends StatelessWidget {
         backgroundColor: TokosmileColors.bottomBarGrey,
         selectedItemColor: TokosmileColors.green,
         showUnselectedLabels: true,
+        showSelectedLabels: true,
         selectedLabelStyle: const TextStyle(color: TokosmileColors.eerieBlack),
         unselectedItemColor: TokosmileColors.darkGrey,
         unselectedLabelStyle: const TextStyle(color: TokosmileColors.darkGrey),
