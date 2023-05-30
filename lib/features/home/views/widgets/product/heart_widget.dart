@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../shared/models/product.dart';
 import '../../../../../shared/styles/tokosmile_colors.dart';
-import '../../../models/product.dart';
 
 class HeartWidget extends StatefulWidget {
   final Product product;
