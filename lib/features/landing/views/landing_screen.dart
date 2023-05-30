@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:marketplace/features/home/views/home_screen.dart';
 import 'package:marketplace/features/landing/controllers/landing_controller.dart';
 import 'package:marketplace/features/landing/views/widgets/bottom_nav_bar.dart';
+import 'package:marketplace/shared/styles/text_constants.dart';
 import 'package:marketplace/shared/utils/locator.dart';
 
 class LandingScreen extends StatefulWidget {
@@ -15,14 +16,11 @@ class LandingScreen extends StatefulWidget {
 class _LandingScreenState extends State<LandingScreen> {
   final LandingController _controller = Locator.getController();
 
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-
   static final List<Widget> _pages = <Widget>[
     HomeScreen(),
-    const Text('Voucher', style: optionStyle),
-    const Text('Wallet', style: optionStyle),
-    const Text('Settings', style: optionStyle),
+    const Center(child: Text(TextConstants.unimplementedText)),
+    const Center(child: Text(TextConstants.unimplementedText)),
+    const Center(child: Text(TextConstants.unimplementedText)),
   ];
 
   @override

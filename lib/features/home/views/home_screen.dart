@@ -18,79 +18,84 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        body: SizedBox(
-          width: double.infinity,
-          child: Column(
-            children: [
-              SizedBox(
-                height: StyleConstants.defaultSize * 30.5,
-                child: PageView.builder(
-                  onPageChanged: (value) => _controller.currHeaderIndex(value),
-                  itemCount: _controller.banners.length,
-                  itemBuilder: (context, index) =>
-                      BannerContent(_controller.banners[index]),
+        body: SingleChildScrollView(
+          primary: true,
+          child: SizedBox(
+            width: double.infinity,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: StyleConstants.defaultSize * 30.5,
+                  child: PageView.builder(
+                    onPageChanged: (value) =>
+                        _controller.currHeaderIndex(value),
+                    itemCount: _controller.banners.length,
+                    itemBuilder: (context, index) =>
+                        BannerContent(_controller.banners[index]),
+                  ),
                 ),
-              ),
-              Container(
-                color: Colors.white,
-                child: const Column(
-                  children: [
-                    SizedBox(height: StyleConstants.defaultSize * 2),
-                    BodyIconRow(),
-                    SizedBox(height: StyleConstants.defaultSize * 2.5),
-                    BannerTabDots(activeIndex: 0, length: 3),
-                    SizedBox(height: StyleConstants.defaultSize * 1.5),
-                  ],
-                ),
-              ),
-              Container(
-                decoration: const BoxDecoration(
-                  gradient: TokosmileColors.greyWhiteGradient,
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(
-                      vertical: StyleConstants.defaultSize * 2,
-                      horizontal: StyleConstants.defaultSize * 2),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Container(
+                  color: Colors.white,
+                  child: const Column(
                     children: [
-                      Text(
-                        'Best Sale Product',
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        'See more',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: TokosmileColors.green),
-                      ),
+                      SizedBox(height: StyleConstants.defaultSize * 2),
+                      BodyIconRow(),
+                      SizedBox(height: StyleConstants.defaultSize * 2.5),
+                      BannerTabDots(activeIndex: 0, length: 3),
+                      SizedBox(height: StyleConstants.defaultSize * 1.5),
                     ],
                   ),
                 ),
-              ),
-              Expanded(
-                child: Container(
+                Container(
+                  decoration: const BoxDecoration(
+                    gradient: TokosmileColors.greyWhiteGradient,
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.fromLTRB(
+                        StyleConstants.defaultSize * 2,
+                        StyleConstants.defaultSize * 2,
+                        StyleConstants.defaultSize * 2,
+                        StyleConstants.defaultSize * 1.5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Best Sale Product',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'See more',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: TokosmileColors.green),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
                   decoration: const BoxDecoration(
                     gradient: TokosmileColors.whiteGreyGradient,
                   ),
-                  child: LayoutBuilder(builder: (context, constraints) {
-                    return GridView.builder(
-                      itemCount: _controller.products.length,
-                      padding:
-                          const EdgeInsets.all(StyleConstants.defaultSize * 2),
-                      itemBuilder: (context, index) =>
-                          ProductWidget(_controller.products[index]),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: constraints.maxWidth > 700 ? 4 : 2,
-                          crossAxisSpacing: StyleConstants.defaultSize * 2,
-                          mainAxisSpacing: StyleConstants.defaultSize * 2,
-                          childAspectRatio: 0.8),
-                    );
-                  }),
-                ),
-              )
-            ],
+                  child: GridView.builder(
+                    shrinkWrap: true,
+                    itemCount: _controller.products.length,
+                    padding:
+                        const EdgeInsets.all(StyleConstants.defaultSize * 2),
+                    itemBuilder: (context, index) =>
+                        ProductWidget(_controller.products[index]),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: StyleConstants.defaultSize * 2,
+                            mainAxisSpacing: StyleConstants.defaultSize * 2,
+                            childAspectRatio: 0.8),
+                  ),
+                )
+              ],
+            ),
           ),
         ));
   }

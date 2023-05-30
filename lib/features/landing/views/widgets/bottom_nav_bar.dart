@@ -27,11 +27,13 @@ class BottomNavBar extends StatelessWidget {
         ],
         currentIndex: _controller.currPageIndex.value,
         backgroundColor: TokosmileColors.bottomBarGrey,
-        selectedItemColor: TokosmileColors.green,
+        selectedIconTheme: const IconThemeData(color: TokosmileColors.green),
+        selectedItemColor: TokosmileColors.eerieBlack,
+        unselectedItemColor: TokosmileColors.darkGrey,
         showUnselectedLabels: true,
         showSelectedLabels: true,
-        selectedLabelStyle: const TextStyle(color: TokosmileColors.eerieBlack),
-        unselectedItemColor: TokosmileColors.darkGrey,
+        selectedLabelStyle: const TextStyle(
+            color: TokosmileColors.eerieBlack, fontWeight: FontWeight.bold),
         unselectedLabelStyle: const TextStyle(color: TokosmileColors.darkGrey),
         onTap: _controller.onNavBarTapped,
       );

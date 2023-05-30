@@ -4,8 +4,8 @@ import 'package:marketplace/features/home/services/banner_service.dart';
 import 'package:marketplace/features/home/services/product_service.dart';
 import 'package:marketplace/shared/utils/locator.dart';
 
+import '../../../shared/models/product.dart';
 import '../models/banner.dart';
-import '../models/product.dart';
 
 class HomeController extends GetxController {
   RxInt currHeaderIndex = 0.obs;
