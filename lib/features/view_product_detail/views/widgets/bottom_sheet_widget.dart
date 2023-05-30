@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../../shared/models/product.dart';
 import '../../../../shared/styles/style_constants.dart';
 import '../../../../shared/styles/tokosmile_colors.dart';
-import '../../../home/models/product.dart';
 import 'buy_now_button.dart';
 
 class BottomSheetWidget extends StatelessWidget {

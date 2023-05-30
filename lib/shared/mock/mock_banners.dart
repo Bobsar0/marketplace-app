@@ -2,7 +2,7 @@ import '../../features/home/models/banner.dart';
 import '../styles/assets.dart';
 
 class MockBanners {
-  static final List<BannerData> get = <BannerData>[
+  static final List<BannerData> bannerCollection = <BannerData>[
     BannerData(
       id: 0,
       title: '#FASHION DAY',
@@ -21,7 +21,7 @@ class MockBanners {
         id: 2,
         title: '#SHOES SALE',
         body: 'DISCOVER OUR \nQUALITY SHOES',
-        colorHex: 0xFF656B82,
+        colorHex: 0xFFFFCE00,
         imagePath: Assets.homeHeaderShoes),
   ];
 }

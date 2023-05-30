@@ -1,4 +1,4 @@
-import 'package:marketplace/features/home/models/product.dart';
+import 'package:marketplace/shared/models/product.dart';
 
 import '../../../shared/utils/locator.dart';
 import '../../home/services/product_service.dart';

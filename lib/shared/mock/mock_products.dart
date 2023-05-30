@@ -1,4 +1,4 @@
-import '../../features/home/models/product.dart';
+import '../models/product.dart';
 import '../styles/assets.dart';
 
 class MockProducts {
@@ -68,7 +68,7 @@ class MockProducts {
       id: 3,
       category: 'Shirt',
       title: "Essentials Men's Regular-Fit Long-Sleeve Oxford T-Shirt",
-      imagePath: Assets.shirt1,
+      imagePath: Assets.shirt4,
       price: 12.00,
       rating: 4.9,
       votes: 2356,
@@ -85,7 +85,7 @@ class MockProducts {
       id: 4,
       category: 'Shirt',
       title: "Essentials Men's Short-Sleeve Crewneck T-Shirt",
-      imagePath: Assets.shirt1,
+      imagePath: Assets.shirt5,
       price: 12.00,
       rating: 4.9,
       votes: 2356,
@@ -102,7 +102,7 @@ class MockProducts {
       id: 5,
       category: 'Hoddie',
       title: "Essentials Men's Short-Sleeve Crewneck T-Shirt",
-      imagePath: Assets.shirt1,
+      imagePath: Assets.hoodie,
       price: 35.00,
       rating: 4.9,
       votes: 2356,
@@ -118,7 +118,7 @@ class MockProducts {
       id: 6,
       category: 'Shirt',
       title: "Essentials Men's Short-Sleeve Crewneck T-Shirt",
-      imagePath: Assets.shirt1,
+      imagePath: Assets.shirt7,
       price: 12.00,
       rating: 4.9,
       votes: 2356,
@@ -135,7 +135,7 @@ class MockProducts {
       id: 7,
       category: 'Shirt',
       title: "Essentials Men's Short-Sleeve Crewneck T-Shirt",
-      imagePath: Assets.shirt1,
+      imagePath: Assets.shirt8,
       price: 24.00,
       rating: 4.9,
       votes: 2356,
@@ -152,7 +152,7 @@ class MockProducts {
       id: 8,
       category: 'Bag',
       title: "Nike Brasilia Medium Training Backpack with...",
-      imagePath: Assets.shirt1,
+      imagePath: Assets.bag,
       price: 25.00,
       rating: 4.9,
       votes: 2356,
@@ -167,7 +167,7 @@ class MockProducts {
       id: 9,
       category: 'Shirt',
       title: "Essentials Men's Regular-Fit Long-Sleeve Oxford T-Shirt",
-      imagePath: Assets.shirt1,
+      imagePath: Assets.shirt9,
       price: 24.00,
       rating: 4.9,
       votes: 2356,

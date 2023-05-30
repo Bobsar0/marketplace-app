@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:marketplace/features/home/models/product.dart';
 import 'package:marketplace/features/home/views/widgets/product/product_widget.dart';
 import 'package:marketplace/features/view_product_detail/controllers/product_detail_controller.dart';
+import 'package:marketplace/shared/models/product.dart';
 import 'package:marketplace/shared/utils/locator.dart';
 
 import '../../../../../shared/styles/style_constants.dart';

@@ -1,5 +1,5 @@
-import 'package:marketplace/features/home/models/product.dart';
 import 'package:marketplace/shared/mock/mock_products.dart';
+import 'package:marketplace/shared/models/product.dart';
 
 class ProductService {
   List<Product> getProducts() {

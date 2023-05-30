@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../shared/models/product.dart';
 import '../../../../../shared/styles/style_constants.dart';
 import '../../../../../shared/styles/tokosmile_colors.dart';
-import '../../../models/product.dart';
 
 class ProductBody extends StatelessWidget {
   final Product product;

@@ -5,7 +5,7 @@ import 'package:marketplace/features/home/views/widgets/product/product_header.d
 import 'package:marketplace/features/view_product_detail/views/pages/product_detail_screen.dart';
 import 'package:marketplace/shared/styles/style_constants.dart';
 
-import '../../../models/product.dart';
+import '../../../../../shared/models/product.dart';
 
 class ProductWidget extends StatelessWidget {
   final Product product;

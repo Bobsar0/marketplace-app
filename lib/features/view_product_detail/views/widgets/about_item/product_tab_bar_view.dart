@@ -3,8 +3,8 @@ import 'package:marketplace/features/view_product_detail/views/widgets/about_ite
 import 'package:marketplace/shared/styles/style_constants.dart';
 import 'package:marketplace/shared/styles/text_constants.dart';
 
+import '../../../../../shared/models/product.dart';
 import '../../../../../shared/styles/tokosmile_colors.dart';
-import '../../../../home/models/product.dart';
 
 class ProductTabBarView extends StatelessWidget {
   final Product product;

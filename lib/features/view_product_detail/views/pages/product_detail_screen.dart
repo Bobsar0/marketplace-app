@@ -9,8 +9,8 @@ import 'package:marketplace/features/view_product_detail/views/widgets/top_revie
 import 'package:marketplace/shared/styles/style_constants.dart';
 import 'package:marketplace/shared/views/widgets/app_bar_stacked_icon.dart';
 
+import '../../../../shared/models/product.dart';
 import '../../../../shared/styles/tokosmile_colors.dart';
-import '../../../home/models/product.dart';
 import '../widgets/about_item/product_tab_bar_view.dart';
 import '../widgets/bottom_sheet_widget.dart';
 import '../widgets/dot_widget.dart';
@@ -41,7 +41,7 @@ class ProductDetailScreen extends StatelessWidget {
           child: Container(
             decoration: const BoxDecoration(
                 gradient: TokosmileColors.whiteGreyGradient),
-            padding: const EdgeInsets.fromLTRB(20, 20, 20, 100),
+            padding: const EdgeInsets.fromLTRB(20, 20, 20, 80),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marketplace/features/home/models/product.dart';
+import 'package:marketplace/shared/models/product.dart';
 
 import '../../../../../shared/styles/style_constants.dart';
 import '../../../../../shared/styles/tokosmile_colors.dart';

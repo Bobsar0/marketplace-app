@@ -3,8 +3,8 @@ import 'package:marketplace/features/home/views/widgets/product/heart_widget.dar
 import 'package:marketplace/shared/styles/style_constants.dart';
 import 'package:marketplace/shared/styles/tokosmile_colors.dart';
 
+import '../../../../../shared/models/product.dart';
 import '../../../../view_product_detail/views/pages/product_detail_screen.dart';
-import '../../../models/product.dart';
 
 class ProductHeader extends StatelessWidget {
   final Product product;
