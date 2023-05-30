@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:marketplace/features/home/services/banner_service.dart';
 import 'package:marketplace/features/home/services/product_service.dart';
+import 'package:marketplace/features/view_product_detail/controllers/product_detail_controller.dart';
 
 import '../../features/home/controllers/home_controller.dart';
 import '../../features/landing/controllers/landing_controller.dart';
@@ -47,6 +48,7 @@ abstract class Locator {
     log('Registering controller locator');
     _registerController<HomeController>(HomeController());
     _registerController<LandingController>(LandingController());
+    _registerController<ProductDetailController>(ProductDetailController());
   }
 
   /// Retrieves a Controller instance object of type [T].
