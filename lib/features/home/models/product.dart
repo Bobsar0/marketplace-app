@@ -6,7 +6,8 @@ class Product {
   final double price;
   final double rating;
   final int votes;
-  final String? description;
+  final List<String>? description;
+  bool isLiked;
 
   Product(
       {required this.id,
@@ -16,5 +17,8 @@ class Product {
       required this.price,
       required this.rating,
       required this.votes,
-      this.description});
+      this.description,
+      this.isLiked = false});
+
+  toggleIsLiked() => isLiked = !isLiked;
 }

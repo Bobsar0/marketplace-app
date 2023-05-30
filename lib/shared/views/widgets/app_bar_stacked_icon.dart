@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace/shared/styles/style_constants.dart';
 
-import '../../../../shared/styles/tokosmile_colors.dart';
+import '../../styles/tokosmile_colors.dart';
 
-class AppBarIcon extends StatelessWidget {
+class AppBarStackedIcon extends StatelessWidget {
   final String text;
   final IconData icon;
   final void Function()? onPressed;
 
-  const AppBarIcon(
+  const AppBarStackedIcon(
       {Key? key, required this.text, required this.icon, this.onPressed})
       : super(key: key);
 

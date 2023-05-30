@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class TokosmileColors {
   TokosmileColors._();
 
+  static const Color defaultGrey = Colors.grey;
   static const Color brightGrey = Color(0xFFE9EBEA);
   static const Color brightGrey2 = Color(0xFFE7E9EB);
   static const Color lightGrey = Color(0xFFF6F6F6);
