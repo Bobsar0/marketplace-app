@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace/features/home/views/widgets/product/heart_widget.dart';
 import 'package:marketplace/features/view_product_detail/views/widgets/description_content.dart';
+import 'package:marketplace/features/view_product_detail/views/widgets/img_video_reviews_widget.dart';
+import 'package:marketplace/features/view_product_detail/views/widgets/reviews_rating_content.dart';
 import 'package:marketplace/shared/styles/style_constants.dart';
 import 'package:marketplace/shared/views/widgets/app_bar_stacked_icon.dart';
 
@@ -121,6 +123,18 @@ class ProductDetailScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: 15.0),
                   child: SellerInfoContent(),
                 ),
+                const Divider(color: TokosmileColors.defaultGrey),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 15.0),
+                  child: ReviewsRatingContent(),
+                ),
+                const Divider(color: TokosmileColors.defaultGrey),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 15.0),
+                  child:
+                      ImgVideoReviewWidget(assetPaths: product.thumbnailPaths),
+                ),
+                const Divider(color: TokosmileColors.defaultGrey),
               ],
             ),
           ),

@@ -7,6 +7,7 @@ class Product {
   final double rating;
   final int votes;
   final List<String> description;
+  final List<String>? thumbnailPaths;
   bool isLiked;
 
   Product(
@@ -18,6 +19,7 @@ class Product {
       required this.rating,
       required this.votes,
       required this.description,
+      this.thumbnailPaths,
       this.isLiked = false});
 
   toggleIsLiked() => isLiked = !isLiked;

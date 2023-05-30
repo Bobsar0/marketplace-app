@@ -26,7 +26,7 @@ class TokosmileColors {
   static const Color gold = Color(0xFFFF9434);
 
   static const whiteGreyGradient = LinearGradient(
-      colors: [whiteGrey, brightGrey2],
+      colors: [whiteGrey, headerGrey],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter);
 

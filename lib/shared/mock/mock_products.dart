@@ -32,6 +32,12 @@ class MockProducts {
           'Durable Combination Cotton Fabric',
           'Comfortable and quality dress shirt',
           'Go To Classic button down shirt for all special occasions'
+        ],
+        thumbnailPaths: [
+          Assets.shirt2Back,
+          Assets.shirt2Sleeve,
+          Assets.shirt2Btn,
+          Assets.shirt2Pocket
         ]),
     Product(
         id: 2,
