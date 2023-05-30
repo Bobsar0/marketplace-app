@@ -12,6 +12,8 @@ class Assets {
   static const String shirt3 = '$_imgAssetPath/shirt3.png';
   static const String shirt9 = '$_imgAssetPath/shirt9.jpeg';
 
+  static const String avatar = '$_imgAssetPath/user.png';
+
   // thumbnails
   static const _thumbnailPath = '$_imgAssetPath/thumbnails';
 

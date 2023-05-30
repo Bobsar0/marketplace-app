@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace/features/home/views/widgets/product/heart_widget.dart';
-import 'package:marketplace/features/view_product_detail/views/widgets/description_content.dart';
-import 'package:marketplace/features/view_product_detail/views/widgets/img_video_reviews_widget.dart';
-import 'package:marketplace/features/view_product_detail/views/widgets/recommendation_content.dart';
-import 'package:marketplace/features/view_product_detail/views/widgets/reviews_rating_content.dart';
+import 'package:marketplace/features/view_product_detail/views/widgets/description/description_content.dart';
+import 'package:marketplace/features/view_product_detail/views/widgets/img_video_reviews/img_video_reviews_widget.dart';
+import 'package:marketplace/features/view_product_detail/views/widgets/padded_content.dart';
+import 'package:marketplace/features/view_product_detail/views/widgets/recommendation/recommendation_content.dart';
+import 'package:marketplace/features/view_product_detail/views/widgets/reviews_rating/reviews_rating_content.dart';
+import 'package:marketplace/features/view_product_detail/views/widgets/top_reviews/top_reviews.dart';
 import 'package:marketplace/shared/styles/style_constants.dart';
 import 'package:marketplace/shared/views/widgets/app_bar_stacked_icon.dart';
 
 import '../../../../shared/styles/tokosmile_colors.dart';
 import '../../../home/models/product.dart';
+import '../widgets/about_item/product_tab_bar_view.dart';
 import '../widgets/bottom_sheet_widget.dart';
 import '../widgets/dot_widget.dart';
-import '../widgets/product_tab_bar_view.dart';
-import '../widgets/seller_info_content.dart';
-import '../widgets/shipping_info_content.dart';
+import '../widgets/seller_info/seller_info_content.dart';
+import '../widgets/shipping_info/shipping_info_content.dart';
+import '../widgets/top_reviews/reviews_paginator.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   final Product product;
@@ -110,34 +113,28 @@ class ProductDetailScreen extends StatelessWidget {
                 const SizedBox(height: StyleConstants.defaultSize * 2.5),
                 SizedBox(height: 160, child: ProductTabBarView(product)),
                 const Divider(color: TokosmileColors.defaultGrey),
+                PaddedContent(DescriptionContent(product.description)),
+                const Divider(color: TokosmileColors.defaultGrey),
+                const PaddedContent(
+                  ShippingInfoContent(),
+                ),
+                const Divider(color: TokosmileColors.defaultGrey),
+                const PaddedContent(
+                  SellerInfoContent(),
+                ),
+                const Divider(color: TokosmileColors.defaultGrey),
+                const PaddedContent(
+                  ReviewsRatingContent(),
+                ),
+                const Divider(color: TokosmileColors.defaultGrey),
+                PaddedContent(
+                    ImgVideoReviewWidget(assetPaths: product.thumbnailPaths)),
+                const Divider(color: TokosmileColors.defaultGrey),
+                const PaddedContent(TopReviews()),
+                const Divider(color: TokosmileColors.defaultGrey),
+                const PaddedContent(ReviewsPaginator()),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15.0),
-                  child: DescriptionContent(product.description),
-                ),
-                const Divider(color: TokosmileColors.defaultGrey),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 15.0),
-                  child: ShippingInfoContent(),
-                ),
-                const Divider(color: TokosmileColors.defaultGrey),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 15.0),
-                  child: SellerInfoContent(),
-                ),
-                const Divider(color: TokosmileColors.defaultGrey),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 15.0),
-                  child: ReviewsRatingContent(),
-                ),
-                const Divider(color: TokosmileColors.defaultGrey),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15.0),
-                  child:
-                      ImgVideoReviewWidget(assetPaths: product.thumbnailPaths),
-                ),
-                const Divider(color: TokosmileColors.defaultGrey),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15.0),
+                  padding: const EdgeInsets.symmetric(vertical: 40),
                   child: RecommendationContent(product: product),
                 ),
               ],

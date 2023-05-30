@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marketplace/shared/styles/style_constants.dart';
 import 'package:marketplace/shared/styles/tokosmile_colors.dart';
 
-import 'dot_widget.dart';
+import '../dot_widget.dart';
 
 class DescriptionContent extends StatelessWidget {
   final List<String> descriptions;
@@ -18,7 +18,7 @@ class DescriptionContent extends StatelessWidget {
         const Align(
           alignment: Alignment.centerLeft,
           child: Text('Description:',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
         ),
         const SizedBox(height: StyleConstants.defaultSize),
         ...descriptions.map(
@@ -46,9 +46,8 @@ class DescriptionContent extends StatelessWidget {
                 style: TextStyle(color: TokosmileColors.green)),
             IconButton(
               onPressed: () {},
-              icon: const Text('^',
-                  style: TextStyle(color: TokosmileColors.defaultGrey)),
-              padding: const EdgeInsets.only(top: 3, left: 10),
+              icon: const Icon(Icons.expand_less,
+                  size: 16, color: TokosmileColors.green),
               alignment: Alignment.centerLeft,
             )
           ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace/shared/styles/style_constants.dart';
 
-import '../../../../shared/styles/tokosmile_colors.dart';
+import '../../../../../shared/styles/tokosmile_colors.dart';
 import 'img_thumbnail_widgets.dart';
 
 class ImgVideoReviewWidget extends StatelessWidget {
@@ -20,7 +20,7 @@ class ImgVideoReviewWidget extends StatelessWidget {
             child: Text('Reviews with images & videos',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 14,
+                    fontSize: 16,
                     color: TokosmileColors.eerieBlack)),
           ),
           const SizedBox(height: StyleConstants.defaultSize * 2),

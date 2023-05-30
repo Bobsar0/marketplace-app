@@ -4,8 +4,8 @@ import 'package:marketplace/features/home/views/widgets/product/product_widget.d
 import 'package:marketplace/features/view_product_detail/controllers/product_detail_controller.dart';
 import 'package:marketplace/shared/utils/locator.dart';
 
-import '../../../../shared/styles/style_constants.dart';
-import '../../../../shared/styles/tokosmile_colors.dart';
+import '../../../../../shared/styles/style_constants.dart';
+import '../../../../../shared/styles/tokosmile_colors.dart';
 
 class RecommendationContent extends StatelessWidget {
   final Product product;
@@ -25,7 +25,7 @@ class RecommendationContent extends StatelessWidget {
             Text('Recommendation',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 14,
+                    fontSize: 16,
                     color: TokosmileColors.eerieBlack)),
             Text('See more',
                 style: TextStyle(fontSize: 14, color: TokosmileColors.green))

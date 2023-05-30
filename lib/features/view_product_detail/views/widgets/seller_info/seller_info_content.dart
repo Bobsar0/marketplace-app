@@ -18,7 +18,7 @@ class SellerInfoContent extends StatelessWidget {
           const Text('Seller Information',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: 16,
                   color: TokosmileColors.eerieBlack)),
           Flexible(
             child: Row(

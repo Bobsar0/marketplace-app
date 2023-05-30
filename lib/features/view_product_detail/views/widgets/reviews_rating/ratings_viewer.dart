@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../shared/styles/tokosmile_colors.dart';
+import '../../../../../shared/styles/tokosmile_colors.dart';
 
 class RatingsViewer extends StatelessWidget {
   final int rateNumber;

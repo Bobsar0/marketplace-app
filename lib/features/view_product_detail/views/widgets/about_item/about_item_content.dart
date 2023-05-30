@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'content_text_label.dart';
+import '../content_text_label.dart';
 
 class AboutItemContent extends StatelessWidget {
   const AboutItemContent({Key? key}) : super(key: key);

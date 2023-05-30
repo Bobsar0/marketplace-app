@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../shared/styles/tokosmile_colors.dart';
-import 'content_text_label.dart';
+import '../../../../../shared/styles/tokosmile_colors.dart';
+import '../content_text_label.dart';
 
 class ShippingInfoContent extends StatelessWidget {
   const ShippingInfoContent({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class ShippingInfoContent extends StatelessWidget {
           Text('Shippings Information:',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: 16,
                   color: TokosmileColors.eerieBlack)),
           SizedBox(height: 20),
           ContentTextLabel(

@@ -11,6 +11,7 @@ class TokosmileApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Tokosmile',
       theme: ThemeData(primarySwatch: Colors.grey, fontFamily: 'Verdana'),
       home: const LandingScreen(),

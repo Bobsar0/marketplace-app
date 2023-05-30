@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../shared/styles/tokosmile_colors.dart';
+import '../../../../../shared/styles/tokosmile_colors.dart';
 import 'ratings_viewer.dart';
 
 class ReviewsRatingContent extends StatelessWidget {
@@ -19,7 +19,7 @@ class ReviewsRatingContent extends StatelessWidget {
           child: Text(
             'Reviews & Ratings',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
           ),
