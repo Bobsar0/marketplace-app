@@ -3,7 +3,7 @@ class Assets {
 
   static const _imgAssetPath = 'assets/images';
 
-  static const String homeHeaderFashion = '$_imgAssetPath/header_clothes.webp';
+  static const String homeHeaderFashion = '$_imgAssetPath/header_clothes.png';
   static const String homeHeaderCosmetics =
       '$_imgAssetPath/header_cosmetics.png';
   static const String homeHeaderShoes = '$_imgAssetPath/header_shoes.png';
@@ -13,7 +13,7 @@ class Assets {
   static const String shirt2 = '$_imgAssetPath/shirt2.png';
   static const String shirt3 = '$_imgAssetPath/shirt3.png';
   static const String shirt4 = '$_imgAssetPath/shirt4.jpeg';
-  static const String shirt5 = '$_imgAssetPath/shirt5.jpeg';
+  static const String polo = '$_imgAssetPath/polo.png';
   static const String hoodie = '$_imgAssetPath/hoodie.png';
   static const String shirt7 = '$_imgAssetPath/shirt7.png';
   static const String shirt8 = '$_imgAssetPath/shirt8.png';
