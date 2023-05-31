@@ -35,7 +35,7 @@ class RatingsViewer extends StatelessWidget {
                 height: 10,
                 width: _containerWidth,
                 decoration: BoxDecoration(
-                  color: TokosmileColors.brightGrey2,
+                  color: TokosmileColors.brightGrey,
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),

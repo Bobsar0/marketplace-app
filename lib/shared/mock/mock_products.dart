@@ -85,7 +85,7 @@ class MockProducts {
       id: 4,
       category: 'Shirt',
       title: "Essentials Men's Short-Sleeve Crewneck T-Shirt",
-      imagePath: Assets.shirt5,
+      imagePath: Assets.polo,
       price: 12.00,
       rating: 4.9,
       votes: 2356,

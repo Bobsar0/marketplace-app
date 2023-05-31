@@ -14,29 +14,26 @@ class ProductWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: StyleConstants.defaultSize * 25,
-      child: Column(
-        children: [
-          ProductHeader(product),
-          const SizedBox(height: StyleConstants.defaultSize),
-          GestureDetector(
-            onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => ProductDetailScreen(product))),
-            child: Padding(
-              padding: const EdgeInsets.all(StyleConstants.defaultSize),
-              child: ProductBody(product),
-            ),
+    return Column(
+      children: [
+        ProductHeader(product),
+        const SizedBox(height: StyleConstants.defaultSize),
+        GestureDetector(
+          onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => ProductDetailScreen(product))),
+          child: Padding(
+            padding: const EdgeInsets.all(StyleConstants.defaultSize),
+            child: ProductBody(product),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: StyleConstants.defaultSize),
-            child: ProductFooter(product),
-          )
-        ],
-      ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(
+              horizontal: StyleConstants.defaultSize),
+          child: ProductFooter(product),
+        )
+      ],
     );
   }
 }

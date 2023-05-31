@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:marketplace/features/home/views/widgets/product/heart_widget.dart';
 import 'package:marketplace/features/view_product_detail/views/widgets/description/description_content.dart';
+import 'package:marketplace/features/view_product_detail/views/widgets/img_video_reviews/img_thumbnail_widgets.dart';
 import 'package:marketplace/features/view_product_detail/views/widgets/img_video_reviews/img_video_reviews_widget.dart';
 import 'package:marketplace/features/view_product_detail/views/widgets/padded_content.dart';
 import 'package:marketplace/features/view_product_detail/views/widgets/recommendation/recommendation_content.dart';
@@ -29,6 +31,10 @@ class ProductDetailScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: TokosmileColors.white,
           elevation: 0.0,
+          leading: IconButton(
+            icon: const Icon(CupertinoIcons.back),
+            onPressed: () => Navigator.pop(context),
+          ),
           actions: [
             HeartWidget(product: product),
             IconButton(
@@ -57,6 +63,22 @@ class ProductDetailScreen extends StatelessWidget {
                         color: TokosmileColors.bottomBarGrey,
                       ),
                     ),
+                    if (product.thumbnailPaths != null &&
+                        product.thumbnailPaths!.isNotEmpty)
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ...product.thumbnailPaths!.map((path) => Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: ImgThumbnailWidget(path,
+                                    size: MediaQuery.of(context).size.height /
+                                        2.5 /
+                                        9,
+                                    radius: 5),
+                              )),
+                        ],
+                      )
                   ],
                 ),
                 const SizedBox(height: StyleConstants.defaultSize * 2),
@@ -87,12 +109,13 @@ class ProductDetailScreen extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          const Icon(Icons.star, color: TokosmileColors.gold),
+                          const Icon(Icons.star,
+                              color: TokosmileColors.gold, size: 20),
                           const SizedBox(width: StyleConstants.defaultSize / 2),
                           Text(
                             "${product.rating} Ratings",
                             style: const TextStyle(
-                                fontSize: 17,
+                                fontSize: 16,
                                 color: TokosmileColors.defaultGrey),
                           ),
                         ],
@@ -100,12 +123,12 @@ class ProductDetailScreen extends StatelessWidget {
                       const DotWidget(),
                       const Text(
                         "2.3k+ Reviews",
-                        style: TextStyle(fontSize: 17, color: Colors.grey),
+                        style: TextStyle(fontSize: 16, color: Colors.grey),
                       ),
                       const DotWidget(),
                       const Text(
                         "2.9k+ Sold",
-                        style: TextStyle(fontSize: 17, color: Colors.grey),
+                        style: TextStyle(fontSize: 16, color: Colors.grey),
                       ),
                     ],
                   ),

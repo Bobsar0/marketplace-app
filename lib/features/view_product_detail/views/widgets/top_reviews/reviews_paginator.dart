@@ -56,7 +56,7 @@ class _PaginatorButton extends StatelessWidget {
       height: 25,
       width: 25,
       decoration: BoxDecoration(
-          color: isActive ? TokosmileColors.white : TokosmileColors.brightGrey2,
+          color: isActive ? TokosmileColors.white : TokosmileColors.brightGrey,
           borderRadius: BorderRadius.circular(100),
           boxShadow: isActive
               ? [

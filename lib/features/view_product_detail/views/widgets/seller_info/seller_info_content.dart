@@ -28,7 +28,7 @@ class SellerInfoContent extends StatelessWidget {
                   width: 80,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: TokosmileColors.brightGrey2,
+                    color: TokosmileColors.brightGrey,
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: const Text(
